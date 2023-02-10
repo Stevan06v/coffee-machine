@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://kit.fontawesome.com/61efd671c0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../js/plugins/jquery.appear.min.js"></script>
+    <script src="../js/plugins/jquery.easypiechart.min.js"></script>
+    <script src="../js/plugins/bootstrap.min.js"></script>
+
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+
+
+
+    <div id="gridContainer">
+
+        <div class="gridItem" id="content">
+
+            <div id="nav_wrapper">
+
+                <nav id="nav">
+                    <!-- Content will be generateed via js -->
+                </nav>
+
+                <div id="moneyBox">
+                    <p>Kontostd: </p>
+                    <div id="ktoStd">0.00€</div>
+                </div>
+            </div>
+
+
+
+            <div id="coffeeGrid"></div>
+
+            <div id="tokenGrid"></div>
+
+
+
+            <div id="moneyGrid">
+                <img id="picCoin" src="../pics/money.png" alt="">
+
+                <div id="gridWrapper">
+                    
+                    <div id="inputFlex">
+                        <input id="moneyAmount" type="text" placeholder="example: 2.50€">
+                        <div class="coffeeButton2" onclick="addMoney()">add</div>
+                    </div>
+
+                    <div id="coinGrid">
+                        <div class="coinBox">
+                            <img class="coinImg" src="../pics/coin3.png" onclick="addMoney2(0.50)" alt="" srcset="">
+                            <div class="coinTxt">0.50€</div>
+                        </div>
+
+                        <div class="coinBox">
+                            <img class="coinImg" src="../pics/coin2.png" onclick="addMoney2(1.50)" alt="" srcset="">
+                            <div class="coinTxt">1.50€</div>
+                        </div>
+                        
+
+                        <div class="coinBox" >
+                             <img class="coinImg" src="../pics/coin.png" onclick="addMoney2(2.50)" alt="" srcset="">
+                            <div class="coinTxt">2.50€</div>
+                        </div>
+                       
+                    </div>
+
+                    <div id="getMoneyBackBtn" onclick="getMoneyBack()">Return money</div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div id="buyGrid">
+                <div id="coffeeBar"></div>
+                <div id="coffee2">
+
+                    <div id="headFlex">
+                        <h1 id="coffeeName2"></h1>
+                        <div id="coffeePicStats"></div>
+                    </div>
+
+                    <div id="coffeeAttr2">
+                        <div id="coffeeCharts2"></div>
+                    </div>
+
+                    <div id="logger">
+                        <h1 style="text-align: center; font-family: SourceSansProBlack;">Console</h1>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div id="coffeeStats">
+                <div id="coffee">
+                    <div id="coffeePicStats2"></div>
+
+                    <div id="coffeeAttr">
+                        <h1 id="coffeeName"></h1>
+                        <div id="coffeeCharts"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="gridItem" id="shoppingCard">
+
+            <h2 id="shoppingCartHead">Shopping Cart</h2>
+
+            <div id="items"></div>
+
+            <div id="buyBtn" onclick="buyItems()">
+                <div id="buy">Buy</div>
+                <div id="sum">0.00€</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "Vlajic_MEDT_CoffeeMachine",
+  "version": "1.0.0",
+  "description": "Medientechnikprojekt spaß huie hui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevan06v/Vlajic_MEDT_CoffeeMachine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevan06v/Vlajic_MEDT_CoffeeMachine/issues"
+  },
+  "homepage": "https://github.com/Stevan06v/Vlajic_MEDT_CoffeeMachine#readme",
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "chartjs": "^0.3.24",
+    "fs": "0.0.1-security"
+  }
+}

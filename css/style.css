@@ -1,0 +1,694 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--background_main);
+    color: var(--color_main);
+
+}
+
+#gridContainer {
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+}
+
+.gridItem {
+    height: 100vh;
+}
+
+
+
+#shoppingCard {
+    cursor: pointer;
+    overflow: auto;
+    width: 30vw;
+    background-color: var(--shoppingCart);
+}
+
+#shoppingCartHead {
+    font-family: SourceSansProBlack;
+    font-size: 2.2em;
+    text-align: center;
+
+}
+
+#content {
+    background-color: var(--color_contentScreen);
+    width: 70vw;
+    height: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2.1vw;
+    width: auto;
+
+}
+
+#nav_wrapper {
+    margin-top: 1vw;
+    display: grid;
+    width: auto;
+    grid-template-columns: auto auto;
+    place-items: center;
+
+}
+
+#myChart {
+    width: 400px;
+    height: 400px;
+
+}
+
+.navIcon {
+    z-index: 1;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: .3s ease transform;
+
+    padding: 1vw;
+    text-shadow: 2px 2px 4px #000000;
+
+
+    /* background: linear-gradient(90deg, rgba(77, 8, 164, 1) 0%, rgba(245, 75, 255, 1) 100%);
+   */
+
+    background: rgb(19, 14, 162);
+    background: linear-gradient(50deg, rgb(59, 53, 212)20%, rgb(44, 176, 185) 80%);
+}
+
+.navIcon:hover {
+    transform: scale(1.25);
+}
+
+#user {
+    border-radius: 51% 72% 63% 22% / 43% 39% 43% 32%;
+}
+
+#lock {
+    border-radius:
+        76% 39% 72% 16% / 19% 39% 43% 62%;
+}
+
+#coins {
+    border-radius: 57% 90% 19% 51% / 36% 39% 52% 41%;
+}
+
+#moneyBill {
+    border-radius: 82% 43% 21% 67% / 48% 57% 23% 27%;
+}
+
+
+#moneyBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1vw;
+
+    place-items: center;
+    font-family: SourceSansProBlack;
+}
+
+
+#coffeeGrid {
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    margin: 1.5vw 1.5vw 1.5vw 1.5vw;
+    gap: 1vw;
+
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.coffeePic {
+    width: 10vw;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+.coffeeBox {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(140deg, rgba(0, 0, 0, 1) 7%, rgba(94, 46, 3, 1) 100%);
+    border-radius: 0.6em;
+    padding: 1.5vw;
+    font-family: "SourceSansProBold";
+    border: solid 5px #0ab6f596;
+    -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    transition: .4s ease transform;
+    height: auto;
+}
+
+.coffeeBox:hover {
+    transform: scale(1.05);
+}
+
+.boxHead {
+    font-family: "SourceSansProBlack";
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.coffeeButton {
+    cursor: pointer;
+    padding: .5vw;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+
+}
+
+.coffeeGrid {
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    place-items: center;
+
+}
+
+.priceBox {
+
+    display: flex;
+    gap: 0.5vw;
+
+}
+
+.xIcon {
+    color: rgb(224, 37, 37);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: .4s ease transform;
+    position: absolute;
+    right: 1.5vw;
+}
+
+.saveIcon {
+    color: rgb(255, 255, 255);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: .4s ease transform;
+    position: absolute;
+    right: 1.5vw;
+}
+
+.saveIcon:hover {
+    transform: scale(1.25);
+}
+
+.xIcon:hover {
+    transform: scale(1.25);
+}
+
+.shoppingCartItem {
+    display: flex;
+    width: auto;
+    padding: 0;
+    background-color: rgb(23, 21, 21);
+    padding: 1vw;
+    place-items: center;
+    gap: 2vw;
+
+}
+
+.saveItem {
+    display: flex;
+    width: auto;
+    padding: 0;
+    background: linear-gradient(130deg, rgba(19, 14, 162, 1) 0%, rgb(117, 165, 209) 69%);
+    padding: 1vw;
+    place-items: center;
+    gap: 2vw;
+}
+
+.itemName {
+    font-size: 1.5rem;
+    font-family: SourceSansProBlack;
+}
+
+.shoppingCartImg {
+    width: 3vw;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+}
+
+
+#buyBtn {
+    display: flex;
+    position: absolute;
+    bottom: 0vh;
+    padding: 2.2vw;
+    background-color: #337bc4;
+    width: 100%;
+    font-family: SourceSansProBlack;
+    background: rgb(19, 14, 162);
+    background: linear-gradient(10deg, rgba(19, 14, 162, 1) 0%, rgba(117, 209, 182, 1) 69%);
+}
+
+#sum {
+    margin-left: 15vw;
+    font-size: 2.9rem;
+
+}
+
+#buy {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    font-family: SourceSansProBlack;
+    font-size: 2.9rem;
+    cursor: pointer;
+}
+
+.itemPrice {
+    position: absolute;
+    right: 7vw;
+}
+
+.bean {
+    width: 1vw;
+}
+
+.bean.gray {
+    opacity: 0.5;
+}
+
+.beans {
+    display: flex;
+    gap: 0.5%;
+}
+
+#items {
+    display: grid;
+    grid-template-columns: auto;
+    width: auto;
+}
+
+#picCoffee {
+    width: 20vw;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#coffee {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+}
+
+#coffeeName {
+    margin-top: 0vw;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    font-family: SourceSansProBlack;
+    justify-content: center;
+}
+
+#coffeeCharts {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    gap: 2vw;
+    width: 20vw;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.chartNames {
+    display: flex;
+    justify-content: center;
+    font-family: 'SourceSansProBlack';
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.chart {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 8em;
+    color: white;
+
+}
+
+.percent {
+    color: #ffffff;
+    position: relative;
+    line-height: 1;
+    font-size: 1.5rem;
+    font-weight: 900;
+    z-index: 1;
+    content: attr(data-after);
+    font-family: 'SourceSansProBlack';
+    display: flex;
+    justify-content: center;
+}
+
+.Ccharts {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+}
+
+.addToken {
+    display: grid;
+    grid-template-columns: auto;
+    width: auto;
+}
+
+.tokenFlex {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    place-items: center;
+
+}
+
+.buyToken {
+    cursor: pointer;
+    padding: .5vw;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+
+}
+
+.tokenPrice {}
+
+.tokenName {
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.tokenNames {
+    overflow: auto;
+    height: 8vh;
+}
+
+/* tokens */
+.tokenBox {
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(140deg, rgba(0, 0, 0, 1) 7%, rgba(94, 46, 3, 1) 100%);
+    padding: 2vw;
+    border-radius: 0.8em;
+    font-family: "SourceSansProBold";
+    border: solid 5px #0ab6f596;
+
+    height: 20vh;
+    width: 10vw;
+
+    -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    transition: .4s ease transform;
+}
+
+
+#tokenGrid {
+    z-index: 2;
+    display: none;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 1vw;
+
+    top: 50%;
+    transform: translateY(5%);
+}
+
+#buyGrid {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+/* Chart style */
+#coffeeBar {
+    display: grid;
+    place-items: center;
+    width: min-content;
+    height: auto;
+
+    background: rgb(36, 36, 36);
+    -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 0px 31px 25px rgba(0, 0, 0, 0.47);
+    padding: .5vw;
+    gap: .5vw;
+    border-radius: .5em;
+    margin-top: 2vw;
+    margin-left: 10vw;
+}
+
+
+.buyItemImage {}
+
+.singleCoffee {
+
+    border-radius: .5em;
+    width: 3vw;
+    padding: .5vw;
+    background-color: #0e0d0d;
+
+    display: inline-block;
+    background: red;
+    /* default color */
+
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, rgb(243, 104, 88) 50%, rgb(120, 230, 101) 50%) right;
+
+    background-size: 200%;
+    -webkit-transition: background-position 1s ease;
+}
+
+
+#coffeeCharts2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+
+}
+
+#coffeeName2 {
+    font-size: 3rem;
+    font-family: SourceSansProBlack;
+
+}
+
+#coffee2 {
+    margin-top: 2.5vw;
+    display: flex;
+    gap: 2vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+
+
+}
+
+#logger {
+
+    overflow-y: auto;
+    border-radius: .5em;
+    background-color: #1e1e1e;
+    width: 15vw;
+
+    height: auto;
+
+}
+
+.errMsg {
+
+    font-family: SourceSansProBlack;
+    padding: .5vw;
+    background-color: var(--background_main);
+    text-align: center;
+    width: auto;
+    height: fit-content;
+}
+
+#headFlex {
+    display: grid;
+    grid-template-columns: auto;
+
+    text-align: center;
+    margin: 0;
+}
+
+#picCoffee2 {
+    padding: 0;
+    width: 20vw;
+    height: auto;
+
+}
+
+#picCoin {
+    padding: 0;
+    width: 25vw;
+    height: auto;
+}
+.coffeeButton2{
+    border: rgb(3, 105, 5) .5em solid;
+    padding: 1.5vw;
+    border-radius: .5em;
+    text-transform: uppercase;
+    transition: .4s ease transform;
+    cursor: pointer;
+    font-family: SourceSansProBlack;
+    background: linear-gradient(130deg, rgba(16,77,6,1) 0%, rgba(19,179,7,1) 99%, rgba(0,255,145,1) 100%);
+}
+.coffeeButton2:hover{
+    transform: scale(1.2);
+}
+
+#moneyAmount {
+    outline: none;
+    border: goldenrod .5em solid;
+    border-radius: .5em;
+    padding: 1.3vw;
+    width: 20vw;
+    font-size: 1.8rem;
+    background: none;
+    color: white;
+    font-family: SourceSansProBold;
+
+}
+
+#inputFlex {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    gap: 2vw;
+    width: auto;
+    height: 2vw;
+}
+
+#moneyGrid {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+#coinGrid {
+    font-family: SourceSansProBlack;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 5vw;
+
+}
+
+.coinImg {
+    border: goldenrod .5em solid;
+    border-radius: .5em;
+    width: 5vw;
+    height: auto;
+    padding: 1vw;
+    cursor: pointer;
+    background: linear-gradient(110deg, rgba(147, 93, 4, 1) 0%, rgba(255, 209, 0, 1) 100%);
+    /*  margin-right: 1vw; */
+    transition: .4s ease transform;
+}
+
+.coinImg:hover {
+    transform: scale(1.2);
+}
+
+#gridWrapper {
+    display: grid;
+    grid-template-columns: auto;
+    
+}
+
+.coinTxt {
+    padding: .5vw;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#getMoneyBackBtn {
+
+    font-family: SourceSansProBlack;
+    font-size: 2rem;
+    border: rgb(3, 105, 5) .5em solid;
+    border-radius: .5em;
+    text-align: center;
+    padding: 1vw;
+    cursor: pointer;
+    background: linear-gradient(130deg, rgba(16,77,6,1) 0%, rgba(19,179,7,1) 59%, rgba(0,255,145,1) 100%);
+    /*  margin-right: 1vw; */
+    transition: .4s ease transform;
+    text-transform: uppercase;
+}
+
+#getMoneyBackBtn:hover {
+    transform: scale(1.2);
+}
+
+    :root {
+        --background_main: #111111;
+        --color_main: #ebebeb;
+        --color_contentScreen: #121212;
+        --shoppingCart: #0e0d0d;
+
+    }
+
+    @font-face {
+        font-family: SourceSansProBlack;
+        src: url('../font/SourceSansPro-Black.ttf');
+    }
+
+    @font-face {
+        font-family: SourceSansProBold;
+        src: url('../font/SourceSansPro-Bold.ttf');
+    }
+    @font-face {
+        font-family: square;
+        src: url('../font/square-deal.ttf');
+    }
